@@ -251,7 +251,7 @@ class ProductCreateApiTest extends TestCase
 
         $response->assertStatus(201)
             ->assertJson([
-                'status' => true,
+                'status' => 'success',
                 'message' => 'Product created successfully on Shopify.',
                 'product' => $expectedResponseProduct,
             ]);

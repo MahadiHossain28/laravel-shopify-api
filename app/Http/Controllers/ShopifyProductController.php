@@ -26,7 +26,7 @@ class ShopifyProductController extends Controller
             $product = $this->shopifyProductService->createProduct($request->validated(), $shopDomain, $accessToken);
 
             return response()->json([
-                'status' => true,
+                'status' => 'success',
                 'message' => 'Product created successfully on Shopify.',
                 'product' => $product,
             ],201);
